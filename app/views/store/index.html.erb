@@ -1,0 +1,45 @@
+<!--<h1>Store#index</h1>
+<p>Find me in app/views/store/index.html.erb</p>   -->
+
+
+<div class="fluid-container">
+
+
+
+<% if notice  %>
+
+<p id="notice"><%= notice %></p>
+
+<% end %>
+
+<h1>e-commerce platform</h1>
+
+<div class="table-responsive">          
+<table class="table">
+  <thead>
+    <tr class="active">
+      <th>Title</th>
+      <th>Description</th>
+      <th>Image url</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr class="info">
+       <td><%= product.title %></td>
+      <td><%= sanitize(product.description) %></td>
+	    <!-- double check if this is really working . -->
+	    <td><%= image_tag(product.image_url) %></td>
+        <td><%= product.price %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+</div> <!-- close table responsive -->
+
+</div> <!-- close container-->
+
