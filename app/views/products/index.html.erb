@@ -20,9 +20,10 @@
       <tr class="info">
         <td><%= product.title %></td>
         <td><%= product.description %></td>
-         <!-- double check if this is really working . -->
-        <td><%= image_tag(product.image_url, :size => "50x50") %></td>
-        <td><%= product.price %></td>
+         <!-- for now mage is hardcoded , fix it to load programtically.-->
+         <td><%= image_tag("5250.png", :size => "50x50") %></td>
+        <!-- <td><%= image_tag(product.image_url, :size => "50x50") %></td> -->
+        <td><%= number_to_currency(product.price) %></td>
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>

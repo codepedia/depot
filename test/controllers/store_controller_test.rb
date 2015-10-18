@@ -6,4 +6,8 @@ class StoreControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-end
+
+  # return the last added product
+  self.latest
+    Product.order(:updated_at).latest
+  end

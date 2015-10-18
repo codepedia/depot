@@ -10,9 +10,58 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+
+<body class="<%= controller.controller_name %>">
+
+
+<div class="container-fluid">
+    <div class="row">
+        <!--Row for logo and company name-->
+
+        <div class="col-md-5">
+            <div class="text-left brand">E-cmmerce</div>
+        </div>
+
+        <div class="col-md-2" id="thumbnail caption">
+            <img class="center-block img-responsive" style="max-width:100px; margin-top:20px;"> <%= image_tag("5250.png")%> 
+
+        </a>
+        </div>
+
+        <div class="col-md-5">
+            <div class="text-right brand">Platform</div>
+        </div>
+    </div> <!-- Ends row -->
+    <!-- <row><div class="text-center address-bar"> <%= @page_title || "Online platform"%></div></row> -->
+</div> <!-- Ends container-fluid-->
+
+<div class="container-fluid jumbotron" style="padding-left:0px; padding-right:0px;">
+
+        <div class="navbar">
+            <div class="navbar-inverse">
+                <ul class="nav nav-tabs nav-justified " role="tablist">
+                    <li class="divider breadcrumb"><a href="index.html">Main</a>
+                    </li>
+                    <li class="divider breadcrumb"><a href="about_us.html">About</a>
+                    </li>
+                    <li class="divider breadcrumb"><a href="products.html">Products</a>
+                    </li>
+                    <li class="divider breadcrumb"><a href="contact.html">Contact US</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Ends navbar-inverse"-->
+        </div>
+        <!-- Ends navbar"-->
+    </div>
+    <!-- Ends container-fluid-->
+
+
+<div class="container-fluid">
+
+
 
 <%= yield %>
-
+</div> <!-- close container-->
 </body>
 </html>

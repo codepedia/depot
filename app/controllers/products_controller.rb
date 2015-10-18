@@ -7,6 +7,11 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
+   # custome made method to return latest ebtry only.    
+   def  self.latest
+        Product.order(:updated_at).last
+   end
+
   # GET /products/1
   # GET /products/1.json
   def show
@@ -71,4 +76,6 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:title, :description, :image_url, :price)
     end
+
+
 end

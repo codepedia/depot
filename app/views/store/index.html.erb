@@ -11,8 +11,8 @@
 <p id="notice"><%= notice %></p>
 
 <% end %>
-
-<h1>e-commerce platform</h1>
+ 
+<h1><center>e-commerce platform</center></h1>
 
 <div class="table-responsive">          
 <table class="table">
@@ -27,15 +27,25 @@
   </thead>
 
   <tbody>
+   
+    <!-- TODO, fix "undefined method latest fo" 
+    <% cache ['store' , Product.latest] do %>
+    -->
     <% @products.each do |product| %>
+    <!-- 
+     <% cache ['entry' , product] do %>
+    -->
       <tr class="info">
        <td><%= product.title %></td>
-      <td><%= sanitize(product.description) %></td>
-	    <!-- double check if this is really working . -->
-	    <td><%= image_tag(product.image_url) %></td>
-        <td><%= product.price %></td>
+       <td><%= sanitize(product.description) %></td>
+	     <!-- double check if this is really working . -->
+	     <td><%= image_tag(product.image_url) %></td>
+       <td><%= number_to_currency(product.price) %></td>
       </tr>
     <% end %>
+    <% end %>
+    <% end %>
+
   </tbody>
 </table>
 
