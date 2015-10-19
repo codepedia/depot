@@ -27,23 +27,15 @@
   </thead>
 
   <tbody>
-   
-    <!-- TODO, fix "undefined method latest fo" 
-    <% cache ['store' , Product.latest] do %>
-    -->
     <% @products.each do |product| %>
-    <!-- 
-     <% cache ['entry' , product] do %>
-    -->
-      <tr class="info">
+          <tr class="info">
        <td><%= product.title %></td>
        <td><%= sanitize(product.description) %></td>
 	     <!-- double check if this is really working . -->
 	     <td><%= image_tag(product.image_url) %></td>
        <td><%= number_to_currency(product.price) %></td>
+       <td><%= button_to 'Add to Cart' , line_items_path(product_id: product) %></td>
       </tr>
-    <% end %>
-    <% end %>
     <% end %>
 
   </tbody>
