@@ -1,15 +1,33 @@
-<% if notice %>
+<div class="container">
 <p id="notice"><%= notice %></p>
-<% end %>
 
-<h2> The cart show page </h2>
-<ul>    
+<h1>Listing Products</h1>
+
+<div class="table-responsive">          
+<table class="table">
+  <thead>
+    <tr class="active">
+      <th>Quantity</th>
+      <th> Product Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
   <% @cart.line_items.each do |item| %>
-  <li><%=  item.quantity %> & items; <%= item.product.title %></li>
-    <!-- <li><%= item.product.title %></li> -->
-  <% end %>
-</ul>
+      <tr class="info">
+      <td><%= item.quantity %></li></td>
+      <td> <%= item.product.title %></li></td>
+      <td>  <%= link_to 'Edit', edit_cart_path(@cart) %>  <%= %> <%= link_to 'Back', carts_path %><td> 
+       
+        
+    </tr>
+    <% end %>
+  </tbody>
+</table>
 
+</div> <!-- close table responsive -->
+<br>
 
-<%= link_to 'Edit', edit_cart_path(@cart) %> |
-<%= link_to 'Back', carts_path %>
+</div> <!-- End of container-->
+

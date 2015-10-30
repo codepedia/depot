@@ -25,6 +25,11 @@ class LineItemsController < ApplicationController
 
   # POST /line_items
   # POST /line_items.json
+
+  # Calling the method we just created : check_if_product_exist_increament_or_add_new_line_item
+  # The method does this : Check if the product_id already exist and if "yes" , it increament the 
+  # -count . Else , it creat a new product => current_item = line_items.build(product_id: product_id)
+  #  all in th model.
   def create
     product = Product.find(params[:product_id])
     @line_item = @cart.check_if_product_exist_increament_or_add_new_line_item(product.id)

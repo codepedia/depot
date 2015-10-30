@@ -2,7 +2,6 @@ class Cart < ActiveRecord::Base
 
    has_many :line_items , dependent: :destroy
 
-
    # now we need a smart add_product() method in our cart . One  checks whether our list
    # of items already include the product we are adding ; if it does , it bumps the quantity 
    #  , and if it doesn not , it builds the a new lineitem. 

@@ -25,6 +25,7 @@ group :development, :test do
   gem 'better_errors', '~> 2.1.1'
   gem 'awesome_print'
   gem 'bootstrap_form'
+  gem 'meta_request', '~> 0.3.4'
   gem 'binding_of_caller'
   gem 'bootstrap-sass', '~> 3.3.5'
 end
