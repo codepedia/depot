@@ -16,11 +16,10 @@
   <tbody>
   <% @cart.line_items.each do |item| %>
       <tr class="info">
-      <td><%= item.quantity %></li></td>
-      <td> <%= item.product.title %></li></td>
-      <td>  <%= link_to 'Edit', edit_cart_path(@cart) %>  <%= %> <%= link_to 'Back', carts_path %><td> 
-       
-        
+      <td><%= item.quantity %> </td>
+      <td><%= item.product.title %> </td>
+      <td><%= link_to 'Edit', edit_cart_path(@cart) %> </td>
+      <td><%= link_to 'Back', carts_path %></td>        
     </tr>
     <% end %>
   </tbody>

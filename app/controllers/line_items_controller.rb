@@ -78,6 +78,7 @@ class LineItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def line_item_params
-      params.require(:line_item).permit(:product, :cart_id)
+      #Double check , added the quantity param to the permit list. #TODO
+      params.require(:line_item).permit(:product, :cart_id , :quantity)
     end
 end
