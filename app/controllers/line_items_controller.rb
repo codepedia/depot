@@ -36,7 +36,8 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
-
+        # had an issue , the redirect_to @store ... causing the add cart button to stay at the 
+        # same page "store page" ... So, that is how rails link redirct and e.g: line_items_path(product_id)
         format.html { redirect_to @line_item.cart, notice: 'Line item was successfully created.' }
         format.json { render :show, status: :created, location: @line_item }
       else
@@ -78,7 +79,6 @@ class LineItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def line_item_params
-      #Double check , added the quantity param to the permit list. #TODO
-      params.require(:line_item).permit(:product, :cart_id , :quantity)
+       params.require(:line_item).permit(:product_id, :cart_id)
     end
 end

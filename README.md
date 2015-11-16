@@ -18,3 +18,10 @@ zeyad@zeyad-SVE1411EGXB:~/shop_app/depot2$ rails generate controller Store index
       create      app/assets/javascripts/store.coffee
       invoke    scss
       create      app/assets/stylesheets/store.scss
+
+
+
+
+-----
+# this to link product and cart ...
+rails generate scaffold LineItem product:references cart:belongs_to 

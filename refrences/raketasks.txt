@@ -1,0 +1,16 @@
+1624  rake db:migrate:status
+1659  rake routes
+1705  rake db:migrate:status --trace
+1706  rake db:load_config
+1836  rake db:migrate AddQuantityToLineItems 
+ 1879  rake db:rollback
+ 1880  rake db:migrate
+1929  rake db:migration:status
+1931  rake db:migrate:up VERSION=20151024182020
+1958  rake db:migrate --version=20151113051636
+1961  rake db:reset
+# fix the duplicate by droping the table entirely , then migrate script
+1968  rake db:drop 
+1973  rake db:migrate:status
+1974  rake db:create
+
