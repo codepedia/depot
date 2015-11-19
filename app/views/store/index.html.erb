@@ -12,7 +12,9 @@
 
 <% end %>
  
-<h1><center>e-commerce platform</center></h1>
+ <!-- removed header-->   
+<!-- <h1><center>e-commerce platform</center></h1> --> 
+<div class="jumptron"> 
 
 <div class="table-responsive">          
 <table class="table">
@@ -29,10 +31,10 @@
   <tbody>
     <% @products.each do |product| %>
           <tr class="info">
+       <!-- double check if this is really working . -->
+       <td><%= image_tag(product.image_url) %></td>
        <td><%= product.title %></td>
        <td><%= sanitize(product.description) %></td>
-	     <!-- double check if this is really working . -->
-	     <td><%= image_tag(product.image_url) %></td>
        <td><%= number_to_currency(product.price) %></td>
        <td><%= button_to 'Add to Cart' , line_items_path(product_id: product) %></td>
       </tr>
@@ -43,5 +45,6 @@
 
 </div> <!-- close table responsive -->
 
+</div>
 </div> <!-- close container-->
 

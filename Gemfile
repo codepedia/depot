@@ -28,5 +28,7 @@ group :development, :test do
   gem 'meta_request', '~> 0.3.4'
   gem 'binding_of_caller'
   gem 'bootstrap-sass', '~> 3.3.5'
+  gem 'font-awesome-sass', '~> 4.4.0'
+  
 end
 

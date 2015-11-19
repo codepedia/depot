@@ -14,9 +14,10 @@
 <body class="<%= controller.controller_name %>">
 
 
+<!-- 
 <div class="container-fluid">
     <div class="row">
-        <!--Row for logo and company name-->
+       
 
         <div class="col-md-5">
             <div class="text-left brand">E-cmmerce</div>
@@ -32,8 +33,11 @@
             <div class="text-right brand">Platform</div>
         </div>
     </div> <!-- Ends row -->
-    <!-- <row><div class="text-center address-bar"> <%= @page_title || "Online platform"%></div></row> -->
-</div> <!-- Ends container-fluid-->
+    <!-- 
+     <row><div class="text-center address-bar"> <%= @page_title || "Online platform"%></div></row> 
+</div>  --> <!-- Ends container-fluid-->
+<!-- commenetd the above section ,  I think its too ugly  -->
+
 
 <div class="container-fluid jumbotron" style="padding-left:0px; padding-right:0px;">
 
@@ -63,5 +67,108 @@
 
 <%= yield %>
 </div> <!-- close container-->
+
+ <!-- starts footer -->
+
+    <div class="footer">
+        <!--navbar-fixed-bottom -->
+
+        <!-- Starts top-footer -->
+        <div class="container-12">
+
+            <ol class="social list-inline fa" style="padding-top: 15px;">
+                <h class="follow_us">Follow us</h>
+                <li><a href="#"><i class="fa fa-facebook fa-2x"></i></a>
+                </li>
+                <!-- Change # with your facebook link -->
+                <li><a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+                </li>
+                <!-- Change # with your twitter link -->
+                <li><a href="#"><i class="fa fa-google-plus fa-2x"></i></a>
+                </li>
+                <!-- Change # with your googleplus link -->
+                <li><a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+                </li>
+                <!-- Change # with your instagram link -->
+            </ol>
+
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="pull-left">
+                    <div class="col-xs-9 footer-col">
+                        <div class="footer-title">
+                            Get In Touch
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><a href="/sell">Sell Your Themes</a>
+                            </li>
+                            <li><a href="/affiliate">Affiliates</a>
+                            </li>
+                            <li><a href="/about">About Us</a>
+                            </li>
+                            <li><a href="/feed">RSS Feed</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Ends pull-left -->
+
+
+                <div class="pull-right">
+                    <div class="col-xs-9 footer-col">
+                        <div class="footer-title">
+                            Get In Touch
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><a href="/sell">Sell Your Themes</a>
+                            </li>
+                            <li><a href="/affiliate">Affiliates</a>
+                            </li>
+                            <li><a href="/about">About Us</a>
+                            </li>
+                            <li><a href="/feed">RSS Feed</a>
+                            </li>
+                        </ul>
+                        <!-- Ends pull-right -->
+
+
+                    </div>
+                </div>
+                <!-- Ends pull-right -->
+
+            </div>
+            <!-- Ends row -->
+        </div>
+        <!-- ends Container -->
+
+        <div class="subFooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="pull-left">
+                            <!--add actual pages if you want -->
+                            © 2014 <a href="http://codeniche.com/" target="_blank">CodeNiche Inc.</a> /
+                            <a href="/licenses">Licenses</a> /
+                            <a href="/terms">Terms &amp; Conditions</a> /
+                            <a href="/privacy">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Ends footer , if you we dont want the above block of code to inherit footer customized properties we can just move the /div one level up-->
+
+
+    
+
+
+
+    
+</div>
+
 </body>
 </html>
