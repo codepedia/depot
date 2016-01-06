@@ -11,7 +11,7 @@
   <%= csrf_meta_tags %>
 </head>
 
-<body class="<%= controller.controller_name %>">
+<body class="<%= controller.controller_name %>" style= "background-color: #F5F5F5;">
 
 
 <!-- 
@@ -61,23 +61,28 @@
     <!-- Ends container-fluid-->
 
 
+
 <div class="container-fluid">
 
 
 
 <%= yield %>
-</div> <!-- close container-->
+</div> <!-- close container for what the store form is rendering-->
 
  <!-- starts footer -->
 
-    <div class="footer">
+<div id="container-fluid">
+        
+
         <!--navbar-fixed-bottom -->
 
         <!-- Starts top-footer -->
-        <div class="container-12">
+        <!--  fix those ,remove the extra space from the top, -->
+        <div style = "background-color: #393443;">
 
-            <ol class="social list-inline fa" style="padding-top: 15px;">
-                <h class="follow_us">Follow us</h>
+            <ol class="social list-inline fa">
+                <ul class="nav nav-tabs navbar navbar-inverse" >
+
                 <li><a href="#"><i class="fa fa-facebook fa-2x"></i></a>
                 </li>
                 <!-- Change # with your facebook link -->
@@ -89,13 +94,14 @@
                 <!-- Change # with your googleplus link -->
                 <li><a href="#"><i class="fa fa-instagram fa-2x"></i></a>
                 </li>
+                </ul>
                 <!-- Change # with your instagram link -->
             </ol>
 
         </div>
 
 
-        <div class="container">
+        <div class="container" style = "background-color: #696969;">
             <div class="row">
                 <div class="pull-left">
                     <div class="col-xs-9 footer-col">
@@ -103,13 +109,7 @@
                             Get In Touch
                         </div>
                         <ul class="list-unstyled">
-                            <li><a href="/sell">Sell Your Themes</a>
-                            </li>
-                            <li><a href="/affiliate">Affiliates</a>
-                            </li>
-                            <li><a href="/about">About Us</a>
-                            </li>
-                            <li><a href="/feed">RSS Feed</a>
+                            <li><a href="/sell">add me</a>
                             </li>
                         </ul>
                     </div>
@@ -123,18 +123,10 @@
                             Get In Touch
                         </div>
                         <ul class="list-unstyled">
-                            <li><a href="/sell">Sell Your Themes</a>
-                            </li>
-                            <li><a href="/affiliate">Affiliates</a>
-                            </li>
-                            <li><a href="/about">About Us</a>
-                            </li>
-                            <li><a href="/feed">RSS Feed</a>
+                            <li><a href="/sell">add me</a>
                             </li>
                         </ul>
                         <!-- Ends pull-right -->
-
-
                     </div>
                 </div>
                 <!-- Ends pull-right -->
@@ -144,31 +136,26 @@
         </div>
         <!-- ends Container -->
 
+       <!-- ends fix this add the css -->
         <div class="subFooter">
-            <div class="container">
+            <div class="container" style= "background-color: #778899;">
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="pull-left">
                             <!--add actual pages if you want -->
-                            © 2014 <a href="http://codeniche.com/" target="_blank">CodeNiche Inc.</a> /
-                            <a href="/licenses">Licenses</a> /
-                            <a href="/terms">Terms &amp; Conditions</a> /
-                            <a href="/privacy">Privacy Policy</a>
+                            © 2014 <a href="http://codeniche.com/" target="_blank">CodeNiche Inc.</a>
+                            <a href="/licenses">Licenses</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>   
+    </div>
+
     </div>
     <!-- Ends footer , if you we dont want the above block of code to inherit footer customized properties we can just move the /div one level up-->
 
 
-    
-
-
-
-    
-</div>
 
 </body>
 </html>
